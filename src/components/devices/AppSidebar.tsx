@@ -36,7 +36,7 @@ export function AppSidebar() {
   return (
     <Sidebar collapsible="icon">
       <SidebarHeader>
-        <div className="flex h-12 items-center gap-2 px-3">
+        <div className={`flex h-12 items-center gap-2 ${!collapsed && "px-3"}`}>
           <div className="flex h-7 w-7 items-center justify-center rounded-md bg-primary text-primary-foreground">
             <Gauge className="h-4 w-4" />
           </div>
