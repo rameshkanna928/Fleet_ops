@@ -134,12 +134,11 @@ function FleetDashboard() {
   }, [store, version, debouncedQuery, statusFilter, sortKey, sortDir]);
 
   const toggleSort = useCallback((key: SortKey) => {
+    setSortDir((d) => (d === "asc" ? "desc" : "asc"));
     setSortKey((prev) => {
       if (prev === key) {
-        setSortDir((d) => (d === "asc" ? "desc" : "asc"));
         return prev;
       }
-      setSortDir("asc");
       return key;
     });
   }, []);
